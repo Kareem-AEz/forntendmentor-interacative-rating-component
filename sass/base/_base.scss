@@ -1,0 +1,120 @@
+body {
+	font-size: 1.5rem;
+	background-color: $color-dark-800;
+	color: $color-dark-100;
+}
+
+svg {
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
+.rating {
+	&__options {
+		display: flex;
+		justify-content: space-between;
+
+		input[type="radio"] {
+			opacity: 0;
+			position: absolute;
+		}
+	}
+
+	&-option {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: 4.4rem;
+		aspect-ratio: 1;
+		color: $color-dark-50;
+		background-color: $color-dark-600;
+		border-radius: $border-radius-round;
+
+		cursor: pointer;
+		position: relative;
+
+		transition: background-color 0.168s $ez-bz;
+		span {
+			text-align: center;
+			position: absolute;
+			height: 1.5rem;
+			width: 1.5rem;
+			line-height: 1.5;
+			color: inherit;
+			font-weight: 600;
+		}
+
+		input[type="radio"]:checked + & {
+			background-color: $color-dark-50;
+			border-color: $color-main;
+			color: $color-dark-800;
+		}
+
+		&:hover {
+			background-color: $color-main;
+		}
+	}
+}
+
+.feedback__message {
+	position: absolute;
+	top: 1.4rem;
+
+	padding: 1rem 2rem;
+	border-radius: $border-radius-round;
+	font-weight: 600;
+
+	color: $color-main;
+	background-color: $color-dark-700;
+	opacity: 1;
+	border: 0.1rem solid $color-dark-600;
+
+	transition: top 0.368s $ez-bz, opacity 0.368s $ez-bz;
+
+	&--hidden {
+		top: -2rem;
+		opacity: 0;
+	}
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 1.4rem;
+	color: $color-dark-800;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+
+	padding: 1.2rem 1.6rem;
+	width: 100%;
+	border-radius: 100px;
+	color: $color-dark-800;
+	background-color: $color-main;
+
+	transition: background-color 0.168s $ez-bz;
+
+	&:hover {
+		background-color: $color-dark-50;
+	}
+}
+
+.animation {
+	z-index: -1;
+	position: absolute;
+	transform: translate(32%, -155%) rotate(22deg) scale(0.8);
+	top: 50%;
+	left: 50%;
+	height: 25rem;
+	width: auto;
+
+	transition: transform 1.16s, opacity 1.16s;
+
+	&--hidden {
+		opacity: 0;
+		transform: translate(-50%, -50%) rotate(0) scale(0.8);
+	}
+}

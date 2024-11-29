@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Interactive rating component</title>
+
+		<link
+			rel="stylesheet"
+			href="css/styles.css"
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section class="feedback">
+				<!-- Rating state start -->
+				<div class="feedback__rating feedback--show">
+					<div class="feedback__content feedback__rating-styled">
+						<svg>
+							<use xlink:href="sprite.svg#icon-star"></use>
+						</svg>
+						<h1>How did we do?</h1>
+						<p>
+							Please let us know how we did with your support request. All
+							feedback is appreciated to help us improve our offering!
+						</p>
+						<form>
+							<div class="rating__options">
+								<input
+									id="option1"
+									type="radio"
+									name="rating"
+									value="1"
+								/>
+								<label
+									class="rating-option"
+									for="option1"
+								>
+									<span>1</span></label
+								>
+								<input
+									id="option2"
+									type="radio"
+									name="rating"
+									value="2"
+								/>
+								<label
+									class="rating-option"
+									for="option2"
+								>
+									<span>2</span></label
+								>
+								<input
+									id="option3"
+									type="radio"
+									name="rating"
+									value="3"
+								/>
+								<label
+									class="rating-option"
+									for="option3"
+								>
+									<span>3</span></label
+								>
+								<input
+									id="option4"
+									type="radio"
+									name="rating"
+									value="4"
+								/>
+								<label
+									class="rating-option"
+									for="option4"
+								>
+									<span>4</span></label
+								>
+								<input
+									id="option5"
+									type="radio"
+									name="rating"
+									value="5"
+								/>
+								<label
+									class="rating-option"
+									for="option5"
+								>
+									<span>5</span></label
+								>
+							</div>
+
+							<button
+								class="btn"
+								type="submit"
+							>
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Rating state end -->
+
+				<!-- Thank you state start -->
+				<div class="feedback__appreciation feedback--hide">
+					<!-- Add rating here -->
+					<div class="feedback__content feedback__appreciation-styled">
+						<svg>
+							<use xlink:href="sprite.svg#illustration-thank-you"></use>
+						</svg>
+						<strong> You selected <span>5</span> out of 5 </strong>
+						<div class="content">
+							<h2>Thank you!</h2>
+							<p>
+								We appreciate you taking the time to give a rating. If you ever
+								need more support, don’t hesitate to get in touch!
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Thank you state end -->
+			</section>
+
+			<img
+				class="animation animation--hidden"
+				src="images/giphy.webp"
+				alt=""
+			/>
+
+			<footer class="footer">
+				<div class="attribution">
+					Challenge by
+					<a
+						href="https://www.frontendmentor.io?ref=challenge"
+						target="_blank"
+						>Frontend Mentor</a
+					>. Coded by <a href="#">Kareem Ahmed</a>.
+				</div>
+			</footer>
+		</main>
+
+		<div class="feedback__message feedback__message--hidden">
+			Please select a rating first!
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
